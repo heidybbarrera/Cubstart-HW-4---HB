@@ -1,0 +1,203 @@
+/* General Set-up (Fonts, margins, background colors) */
+
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #1d3557;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    border: 4px solid #1d3557;
+    transition: ease-in-out 0.3s;
+}
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+}
+
+
+/* Question 1. Add a hover effect for your h1 tag and img tag! You can change the background-color, color, opacity, or anything you want.*/
+h1 {
+    box-shadow:inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+h1:hover{
+    color: #cdeffa;
+    box-shadow: inset 500px 0 0 0 0 #54b3d6;;
+}
+
+img {
+    border-radius: 30%;
+}
+
+img:hover {
+    opacity: 40%;
+}
+
+
+/* Question 2. Add margin, padding, and borders to section tags! */
+
+section#education {
+    text-align: center;
+    border: 10px solid gray;
+    padding: 0px;
+    margin: 1px;
+}
+
+section#experience {
+    text-align: center;
+    border: 10px solid gray;
+    padding: 5px;
+    margin: 1px;
+}
+
+.project-wrapper {
+    text-align: center;
+    border: 10px solid gray;
+    padding: 5px;
+    margin: 1px; 
+}
+
+.contact-wrapper {
+    text-align: center;
+    border: 10px solid gray;
+    padding: 5px;
+    margin: 1px; 
+}
+
+
+/* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
+
+section#education {
+    background-color:#cbe5fc;
+}
+
+section#experience {
+    background-color:#cbe5fc;
+}
+
+section#projects {
+    
+    background-color:#cbe5fc;
+}
+
+section#contact {
+    
+    background-color:#cbe5fc;
+}
+
+
+
+/* Experience Section */
+
+/* Question 4a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
+
+ .experience-wrapper{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.experience-list-item {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    border: 4px solid #1d3557;
+    text-align: left;
+    width: 150px;
+    padding: 1px 30px;
+    background-color: #a5d2ee;
+    border-radius: 15px;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition-property: border-radius;
+    transition: ease-in-out 0.3s;
+}
+
+
+
+/* Question 4b. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+.experience-list-item:hover {
+    border-radius: 40px;
+}
+
+
+
+
+/* Projects Section */
+
+/* Question 5. Use CSS Flexbox or Grid and hover effects for the Projects Section, 
+but use different hover effects from the Experiences section! */
+
+
+.project-list-item {
+    border: 4px solid #1d3557;
+    text-align: left;
+    padding: 1px 30px;
+    background-color: #a5d2ee;
+    border-radius: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-list-item-list-item:hover {
+    background-color: green;
+}
+
+/* Contact Section */
+
+/* Question 6. Make your link pretty! */
+
+a.instagram{
+ text-decoration:none;
+}
+a.instagram {
+    background:
+        linear-gradient(
+            to right,
+            rgba(100,200,200,1),
+            rgba(100,200,200,1)
+            ),
+        linear-gradient(
+            to right,
+            rgba(255, 0, 0,1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1)
+            );
+     background-size: 100% 3px, 0 3px;
+     background-position: 100% 100%, 0 100%;
+     background-repeat: no-repeat;
+     transition: background-size .3s ease-in-out;
+ }
+ 
+ a.instagram:hover{
+      background-size: 0 3px, 100% 3px;
+ }
+
+
+/* Question 7. Let's make this a little more mobile-friendly! Use a media query/breakpoint to make
+project-list-item and experience-list-item divs have a width of 100% for smaller devices.*/
+
+/* Small devices (portrait tablets and large phones, 600px screen and up) */
+@media only screen and (max-width: 600px) {
+ 
+    .experience-list-item{
+        max-width: 100%;}
+    
+}
+
